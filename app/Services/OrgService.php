@@ -29,7 +29,7 @@ class OrgService
         $orderBy = $request->input('order_by', 'total_purchases');
         $orderDirection = $request->input('order_direction', 'desc');
 
-        $validOrderByFields = ['total_purchases', 'total_sales', 'o.name'];
+        $validOrderByFields = ['total_purchases', 'total_sales'];
         if (!in_array($orderBy, $validOrderByFields, true)) {
             $orderBy = 'total_purchases';
         }
